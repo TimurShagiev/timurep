@@ -78,8 +78,8 @@ WSGI_APPLICATION = 'problem_list.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myprojectim',
-        'USER': 'myprojectusertim',
+        'NAME': 'timurdb',
+        'USER': 'timurdbuser',
         'PASSWORD': 'qwerty',
         'HOST': 'localhost',
         'PORT': '',
