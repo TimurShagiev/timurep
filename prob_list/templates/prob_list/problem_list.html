@@ -1,0 +1,20 @@
+
+{% block content %}
+  <h2 style="margin:0px 50%">Problems:</h2>
+  <ul>
+  {% for problem in problems %}
+      <div class="block" style="">
+         <li style="background-color:cornflowerblue; margin: 40px 40%; border-radius: 10px; text-align:center; padding:5px; border-style:solid; border-color: black ; text-decoration: none; color:black;">Name: {{ problem.name }} <br> Creator contacts: {{problem.email}} and {{problem.phone}} <br>  Priority: {{ problem.priority }} <br> Actions: {{ problem.actions}} <br> Status: {{ problem.status }} <br>
+                 {% if problem.status != 'resolved' %}
+              <a href="{% url 'problem_detail' problem.id %}">Watch details</a>
+            {% endif %}
+         </li>
+        <br>
+        {% empty %}
+          No problems.
+      </div>
+
+  {% endfor %}
+  </ul>
+<p><a href="{% url 'new_problem' %}">Create new problem</a></p>
+{% endblock %}

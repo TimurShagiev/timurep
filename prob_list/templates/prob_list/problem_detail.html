@@ -1,0 +1,19 @@
+{% block content %}
+<div class="details" style="background-color:cornflowerblue; margin: 40px 40%; border-radius: 10px; text-align:center; padding:5px; border-style:solid; border-color: black ; text-decoration: none; color:black;">
+    <h2>Details</h2>
+    <p><strong>Name:</strong> {{ problem.name }}</p>
+    <p><strong>Phone number:</strong> {{ problem.phone }}</p>
+    <p><strong>Email:</strong> {{ problem.email }}</p>
+    <p><strong>Description:</strong> {{ problem.description }}</p>
+    <p><strong>Priority:</strong> {{ problem.get_priority_display }}</p>
+    <p><strong>Status:</strong> {{ problem.get_status_display }}</p>
+    <p><strong>Date of creation:</strong> {{ problem.create_at }}</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <p><a href="{% url 'problem_list' %}" style="background-color:white; border-radius: 10px; padding: 5px; text-decoration: none; color:black">Return</a></p>
+</div>
+
+{% endblock %}

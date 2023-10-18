@@ -1,0 +1,10 @@
+{% block content %}
+  <h2 style="margin:0px 40%">New Problem</h2>
+  <form method="post">
+    {% csrf_token %}
+    <div class="div" style="background-color:cornflowerblue; margin: 0px 40%; border-radius: 10px; text-align:center;padding:5px; border-style:solid; border-color: black">
+      {{ form.as_p }}
+    </div>
+    <button type="submit" style="margin:50px 50%; border-radius: 10px">Create</button>
+  </form>
+{% endblock %}
