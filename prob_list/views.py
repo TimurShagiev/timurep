@@ -51,3 +51,7 @@ def new_problem(request):
         form = ProblemForm()
     return render(request, 'prob_list/new_problem.html', {'form': form})
 
+def about(request):
+    return render(request, 'prob_list/about.html')
+
+

@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('prob_list/', problems_views.problem_list, name='problem_list'),
     path('prob_list/<int:problem_id>/', problems_views.problem_detail, name='problem_detail'),
-    path('prob_list/create/', problems_views.new_problem, name='new_problem'),
+    path('', problems_views.new_problem, name='new_problem'),
+    path('about/', problems_views.about, name='about'),
 ]
