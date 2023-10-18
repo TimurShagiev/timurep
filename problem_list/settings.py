@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-)9uvb2m5a)l8*d$btd41b)st2yrox4-ace$x+(#+71bvjn71^v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["165.232.66.224", "localhost"]
 
 
 # Application definition
@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'problem_list.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'myprojectim',
+        'USER': 'myprojectusertim',
+        'PASSWORD': 'qwerty',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
@@ -123,3 +127,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
