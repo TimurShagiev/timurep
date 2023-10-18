@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'problem_list.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'timurdb',
+        'NAME': 'timurpost',
         'USER': 'timurdbuser',
         'PASSWORD': 'qwerty',
         'HOST': 'localhost',
